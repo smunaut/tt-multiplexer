@@ -61,7 +61,7 @@ C {devices/ipin.sym} 60 -120 0 0 {name=p3 lab=in sim_pinnumber=4}
 C {devices/iopin.sym} 60 -240 0 1 {name=p5 lab=VDPWR sim_pinnumber=2}
 C {devices/opin.sym} 540 -120 0 1 {name=p6 lab=out_p sim_pinnumber=5}
 C {devices/opin.sym} 1200 -120 0 0 {name=p7 lab=out_n im_pinnumber=6}
-C {gf180mcuD_pr/nfet3_03v3.sym} 140 -70 0 0 {name=M1
+C {gf180mcu_fd_pr/nfet3_03v3.sym} 140 -70 0 0 {name=M1
 L=0.28u
 W=0.89u
 body=VGND
@@ -76,7 +76,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_03v3.sym} 140 -170 0 0 {name=M2
+C {gf180mcu_fd_pr/pfet3_03v3.sym} 140 -170 0 0 {name=M2
 L=0.28u
 W=2.0u
 body=VDPWR
@@ -91,7 +91,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 760 -70 2 1 {name=M3
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 760 -70 2 1 {name=M3
 L=0.6u
 W=0.5u
 body=VGND
@@ -106,7 +106,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_05v0.sym} 800 -170 0 1 {name=M4
+C {gf180mcu_fd_pr/pfet3_05v0.sym} 800 -170 0 1 {name=M4
 L=0.5u
 W=0.5u
 body=VAPWR
@@ -122,7 +122,7 @@ model=pfet_05v0
 spiceprefix=X
 }
 C {devices/lab_wire.sym} 220 -120 0 1 {name=p4 sig_type=std_logic lab=in_n}
-C {gf180mcuD_pr/nfet3_05v0.sym} 980 -70 0 1 {name=M5
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 980 -70 0 1 {name=M5
 L=0.6u
 W=0.5u
 body=VGND
@@ -137,7 +137,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_05v0.sym} 940 -170 0 0 {name=M6
+C {gf180mcu_fd_pr/pfet3_05v0.sym} 940 -170 0 0 {name=M6
 L=0.5u
 W=0.5u
 body=VAPWR
@@ -154,7 +154,7 @@ spiceprefix=X
 }
 C {devices/lab_wire.sym} 1040 -70 0 1 {name=p8 sig_type=std_logic lab=in_n}
 C {devices/lab_wire.sym} 700 -70 0 0 {name=p9 sig_type=std_logic lab=in_p}
-C {gf180mcuD_pr/nfet3_05v0.sym} 1140 -70 2 1 {name=M7
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 1140 -70 2 1 {name=M7
 L=0.60u
 W=0.5u
 body=VGND
@@ -169,7 +169,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_05v0.sym} 1140 -170 0 0 {name=M8
+C {gf180mcu_fd_pr/pfet3_05v0.sym} 1140 -170 0 0 {name=M8
 L=0.5u
 W=1.0u
 body=VAPWR
@@ -184,7 +184,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 600 -70 2 0 {name=M9
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 600 -70 2 0 {name=M9
 L=0.60u
 W=0.5u
 body=VGND
@@ -199,7 +199,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_05v0.sym} 600 -170 0 1 {name=M10
+C {gf180mcu_fd_pr/pfet3_05v0.sym} 600 -170 0 1 {name=M10
 L=0.5u
 W=1.0u
 body=VAPWR
@@ -214,7 +214,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_03v3.sym} 300 -70 0 0 {name=M11
+C {gf180mcu_fd_pr/nfet3_03v3.sym} 300 -70 0 0 {name=M11
 L=0.28u
 W=0.89u
 body=VGND
@@ -229,7 +229,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_03v3.sym} 300 -170 0 0 {name=M12
+C {gf180mcu_fd_pr/pfet3_03v3.sym} 300 -170 0 0 {name=M12
 L=0.28u
 W=2.0u
 body=VDPWR

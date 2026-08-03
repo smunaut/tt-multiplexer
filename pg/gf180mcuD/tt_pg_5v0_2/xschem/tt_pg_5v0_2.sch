@@ -45,7 +45,7 @@ C {devices/lab_wire.sym} 460 -40 0 1 {name=p5 sig_type=std_logic lab=H_ctrl_p}
 C {devices/lab_wire.sym} 460 0 0 1 {name=p6 sig_type=std_logic lab=H_ctrl_n}
 C {devices/iopin.sym} 80 -200 0 1 {name=p7 lab=VAPWR sim_pinnumber=3}
 C {lv2hv.sym} 290 -20 0 0 {name=x2}
-C {gf180mcuD_pr/pfet3_05v0.sym} 720 -180 3 0 {name=M1
+C {gf180mcu_fd_pr/pfet3_05v0.sym} 720 -180 3 0 {name=M1
 L=0.50u
 W=3311u
 body=VAPWR
@@ -60,7 +60,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_05v0.sym} 600 -90 0 0 {name=M2
+C {gf180mcu_fd_pr/pfet3_05v0.sym} 600 -90 0 0 {name=M2
 L=0.5u
 W=13.2u
 body=VAPWR
@@ -75,7 +75,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 600 10 0 0 {name=M3
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 600 10 0 0 {name=M3
 L=0.60u
 W=6.40u
 body=VGND

@@ -32,7 +32,7 @@ C {devices/iopin.sym} 80 100 0 1 {name=p1 lab=VGND sim_pinnumber=1}
 C {devices/iopin.sym} 860 -140 0 0 {name=p3 lab=GPWR sim_pinnumber=3}
 C {discharge_3v3.sym} 620 -10 0 0 {name=x[1:2]}
 C {devices/lab_wire.sym} 470 -20 0 0 {name=p5 sig_type=std_logic lab=ctrl_n}
-C {gf180mcuD_pr/nfet3_03v3.sym} 320 30 0 0 {name=M1
+C {gf180mcu_fd_pr/nfet3_03v3.sym} 320 30 0 0 {name=M1
 L=0.28u
 W=11.0u
 body=VGND
@@ -47,7 +47,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_03v3.sym} 320 -70 0 0 {name=M2
+C {gf180mcu_fd_pr/pfet3_03v3.sym} 320 -70 0 0 {name=M2
 L=0.28u
 W=20.68u
 body=VPWR
@@ -62,7 +62,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcuD_pr/pfet3_03v3.sym} 490 -120 3 0 {name=M3
+C {gf180mcu_fd_pr/pfet3_03v3.sym} 490 -120 3 0 {name=M3
 L=0.28u
 W=7667u
 body=VPWR

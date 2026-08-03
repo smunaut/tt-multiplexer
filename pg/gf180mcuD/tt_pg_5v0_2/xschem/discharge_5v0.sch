@@ -33,7 +33,7 @@ C {devices/title.sym} 180 100 0 0 {name=l1 author="Sylvain Munaut"}
 C {devices/iopin.sym} 100 -420 0 1 {name=p2 lab=GPWR sim_pinnumber=2}
 C {devices/iopin.sym} 100 0 0 1 {name=p1 lab=VGND sim_pinnumber=1}
 C {devices/ipin.sym} 100 -380 0 0 {name=p3 lab=gate sim_pinnumber=3}
-C {gf180mcuD_pr/nfet3_05v0.sym} 200 -290 0 0 {name=M1
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 200 -290 0 0 {name=M1
 L=0.80u
 W=1.00u
 body=VGND
@@ -48,7 +48,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 200 -210 0 0 {name=M2
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 200 -210 0 0 {name=M2
 L=0.80u
 W=1.00u
 body=VGND
@@ -63,7 +63,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 200 -130 0 0 {name=M3
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 200 -130 0 0 {name=M3
 L=0.80u
 W=1.00u
 body=VGND
@@ -78,7 +78,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 200 -50 0 0 {name=M4
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 200 -50 0 0 {name=M4
 L=0.80u
 W=1.00u
 body=VGND
@@ -93,7 +93,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 380 -290 0 0 {name=M5
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 380 -290 0 0 {name=M5
 L=0.80u
 W=1.00u
 body=VGND
@@ -108,7 +108,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 380 -210 0 0 {name=M6
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 380 -210 0 0 {name=M6
 L=0.80u
 W=1.00u
 body=VGND
@@ -123,7 +123,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 380 -130 0 0 {name=M7
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 380 -130 0 0 {name=M7
 L=0.80u
 W=1.00u
 body=VGND
@@ -138,7 +138,7 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 380 -50 0 0 {name=M8
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 380 -50 0 0 {name=M8
 L=0.80u
 W=1.00u
 body=VGND
