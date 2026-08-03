@@ -44,7 +44,7 @@ C {devices/iopin.sym} 880 -140 0 0 {name=p6 lab=bus sim_pinnumber=6}
 C {lv2hv.sym} 350 -20 0 0 {name=x1}
 C {devices/lab_wire.sym} 580 -40 0 0 {name=p7 sig_type=std_logic lab=tgon_p}
 C {devices/lab_wire.sym} 580 0 0 0 {name=p8 sig_type=std_logic lab=tgon_n}
-C {gf180mcuD_pr/pfet3_05v0.sym} 960 -20 0 1 {name=M1
+C {gf180mcu_fd_pr/pfet3_05v0.sym} 960 -20 0 1 {name=M1
 L=0.50u
 W=592u
 body=VAPWR
@@ -59,7 +59,7 @@ sa=0 sb=0 sd=0
 model=pfet_05v0
 spiceprefix=X
 }
-C {gf180mcuD_pr/nfet3_05v0.sym} 740 -20 0 0 {name=M2
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 740 -20 0 0 {name=M2
 L=0.60u
 W=217u
 body=VGND
@@ -76,7 +76,7 @@ spiceprefix=X
 }
 C {devices/lab_wire.sym} 680 -20 0 0 {name=p9 sig_type=std_logic lab=tgon_p}
 C {devices/lab_wire.sym} 1020 -20 0 1 {name=p10 sig_type=std_logic lab=tgon_n}
-C {gf180mcuD_pr/nfet3_05v0.sym} 740 110 0 0 {name=M3
+C {gf180mcu_fd_pr/nfet3_05v0.sym} 740 110 0 0 {name=M3
 L=0.60u
 W=31u
 body=VGND
