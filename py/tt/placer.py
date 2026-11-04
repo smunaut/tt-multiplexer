@@ -189,38 +189,32 @@ class ModulePlacer:
 
 		return pos_x, pos_y
 
-	def la2ld(self, amux_id, ablk_id):
+	def la2ld(self, amux_id, ablk_id, mh=2):
 		"""
 		Converts a logical position on an 'analog mux' to the matching position
 		on a 'digital mux' where the module actually is located
 		"""
-		# Side toward or away from controller
-		if ablk_id & 1:
-			# Away from the controller
-			dmux_id = amux_id + 4
-			dblk_id = ablk_id ^ 1
+		# Convert to X/Y position
+		px, py = self.l2p(amux_id, ablk_id)
 
-		else:
-			# Toward the controller
-			if amux_id >= 4:
-				# Normal case
-				dmux_id = amux_id - 4
-				dblk_id = ablk_id ^ 1
+		# Direction of movement
+		sy = 1 if (py & 1) else -1
 
-			else:
-				# We're crossing over the other side of the controller
-				dmux_id = amux_id ^ 1
-				dblk_id = ablk_id
+		# Move to the "other side" of the module
+		py += sy * (mh - 1)
+
+		# Convert back to logical
+		dmux_id, dblk_id = self.p2l(px, py)
 
 		return dmux_id, dblk_id
 
-	def ld2la(self, dmux_id, dblk_id):
+	def ld2la(self, dmux_id, dblk_id, mh=2):
 		"""
 		Converts a logical position on an 'digital mux' to the matching position
 		on a 'analog mux' where the module analog ports would be
 		"""
 		# Turns out it's an involution
-		return self.la2ld(dmux_id, dblk_id)
+		return self.la2ld(dmux_id, dblk_id, mh)
 
 	def load_modules(self, mod_file):
 		# Load raw data from YAML
@@ -575,14 +569,14 @@ class AnalogPinGroup:
 		# Does the module already have a position ?
 		if (mod.pos_x is not None) and (mod.pos_y is not None):
 			# Yes, use that
-			mux_id, blk_id = self.placer.la2ld(*self.placer.p2l(mod.pos_x, mod.pos_y))
+			mux_id, blk_id = self.placer.la2ld(*self.placer.p2l(mod.pos_x, mod.pos_y), mod.height)
 
 		else:
 			# Nope, Find a position for it
 			mux_id, blk_id = self.pick_pos_for_module(mod)
 
 			# Assign it as constraint
-			x, y = self.placer.l2p(*self.placer.la2ld(mux_id, blk_id))
+			x, y = self.placer.l2p(*self.placer.la2ld(mux_id, blk_id, mod.height))
 
 			mod.pos_x = x
 			mod.pos_y = y
@@ -631,7 +625,7 @@ class AnalogPlacer:
 					continue
 
 			# Module has a fixed position, find analog pin groups
-			mux_id, blk_id = self.placer.ld2la(*self.placer.p2l(m.pos_x, m.pos_y))
+			mux_id, blk_id = self.placer.ld2la(*self.placer.p2l(m.pos_x, m.pos_y), m.height)
 
 			for g in self.groups:
 				if g.is_pos_in_group(mux_id, blk_id):
