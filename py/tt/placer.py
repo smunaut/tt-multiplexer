@@ -529,6 +529,12 @@ class AnalogPinGroup:
 
 		# Scan for a match
 		for mux_id, blk_id in self.pos_free:
+			# Check there is a matching digital mux
+			dmux_id, dblk_id = self.placer.la2ld(mux_id, blk_id, mod.height)
+			pos_x, pox_y = self.placer.l2p(dmux_id, dblk_id)
+			if not self.placer._site_suitable(mod, pos_x, pox_y):
+				continue
+
 			# Check if it fits
 			fit = True
 			for i in range(mod.width):
